@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>タスクボード</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <h2>🐈 My Task 🐈</h2>
+        <div class="input-container">
+            <div class="input-group">
+                <select id="priorityInput">
+                    <option value="☆">☆ (通常)</option>
+                    <option value="★">★ (重要)</option>
+                </select>
+                <select id="categoryInput">
+                    <option value="メンテ">メンテ</option>
+                    <option value="IDC">IDC</option>
+                    <option value="サーバー">サーバー</option>
+                    <option value="設置前設定">設置前設定</option>
+                    <option value="設置後設定">設置後設定</option>
+                    <option value="撤去後設定">撤去後設定</option>
+                    <option value="自主">自主</option>
+                </select>
+                <input type="text" id="taskInput" placeholder="なにをする？">
+                <button class="add-btn" id="addBtn">追加</button>
+            </div>
+            <div class="input-group url-group">
+                <span class="url-label">🔗</span>
+                <input type="text" id="urlText" placeholder="リンクの表示テキスト（任意）">
+                <input type="url" id="urlInput" placeholder="URL（任意）">
+            </div>
+        </div>
+        <div class="sort-bar">
+            <span class="sort-label">並び替え：</span>
+            <button class="sort-btn" id="sortStar">★ 重要度</button>
+            <button class="sort-btn" id="sortCategory">🏷 タグ</button>
+            <button class="sort-btn" id="sortDate">📅 日付</button>
+        </div>
+        <ul id="taskList" class="task-grid"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
